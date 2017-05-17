@@ -1,0 +1,16 @@
+# Third Party Files
+node_modules
+**/public/lib
+
+# User specific Files
+.vs
+.vscode
+*.user
+
+# Build Artifact Files
+bin
+obj
+
+*.js
+*.lock.json
+*.js.map
