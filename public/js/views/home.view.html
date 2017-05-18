@@ -1,3 +1,4 @@
-<p>welcome home</p>
 
-<p ng-bind="vm.secret"></p>
+<div class="alert alert-success" ng-bind="vm.secret" ng-show="vm.secrets()" role="alert"></div>
+
+<div class="alert alert-danger" ng-show="!vm.secrets()" role="alert">Unauthorized User...</div>

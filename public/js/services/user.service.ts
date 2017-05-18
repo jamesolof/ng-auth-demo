@@ -3,7 +3,7 @@ namespace application.services {
 
         static $inject = ['$http'];
 
-        public secret = "you have not unlocked any secrets";
+        public secret = "none";
 
         constructor(public $http: ng.IHttpService) { }
 
@@ -26,12 +26,10 @@ namespace application.services {
         public getSecret(token){
             this.$http.get('/api/profile',{
                 headers: {'authorization': `bearer ${token}`}
-            }).then((result) => {this.secret = JSON.stringify(result.data)
-                    console.log(this.secret)}
-            ).catch((err) => console.log(err))
+            }).then((result) => {
+                this.secret = JSON.stringify(result.data)
+                console.log(this.secret)
+            }).catch((err) => console.log(err))
         }
-        //$http.get('/api/profile', {
-        //    headers: {'authorization': `bearer ${token}`}
-        //})
     }
 }
