@@ -1,6 +1,16 @@
-<div class="form-group row">
-  <label for="example-text-input" class="col-2 col-form-label">Text</label>
-  <div class="col-10">
-    <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
+<div><h3>Create a new user</h3></div>
+
+<form>
+  <div class="form-group">
+    <label for="usernameEntry">Username</label>
+    <input type="text" ng-model="vm.formData.username" id="usernameEntry"class="form-control" >
+    
+    <label for="emailEntry">Email address</label>
+    <input type="email" ng-model="vm.formData.email" id="emailEntry" class="form-control" >
+
+    <label for="passwordEntry">Password</label>
+    <input type="password" ng-model="vm.formData.password" id="passwordEntry" class="form-control"  >
+
   </div>
-</div>
+</form>
+<button ng-click="vm.register()">gimme</button>

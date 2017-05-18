@@ -1,5 +1,6 @@
 namespace application{
     angular.module('app', [
         'ui.router'])
-        .config(configurator);
+        .config(configurator)
+        .service('userService', services.userService)
 }

@@ -11,7 +11,7 @@ namespace application {
             .state('Home', {
                 url: '/',
                 templateUrl: 'js/views/home.view.html',
-                controller: "homeController",
+                controller: controllers.homeController,
                 controllerAs: 'vm'
             })
             .state('Login', {

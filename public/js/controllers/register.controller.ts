@@ -3,8 +3,10 @@ namespace application.controllers{
 
         public formData;
 
-        constructor(userService: services.userService){}
+        constructor(public userService: services.userService){}
 
-        
+        public register(){
+            this.userService.registerUser(this.formData);
+        }            
     }
 }

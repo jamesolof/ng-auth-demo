@@ -3,7 +3,12 @@ namespace application.controllers{
 
         public formData;
 
-        constructor(userService){}
+        public secret = "you have not unlocked any secrets";
+
+        constructor(public userService: services.userService){
+            console.log("welcome home");
+            this.secret = this.userService.secret;
+        }
 
         
     }

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-
-<head ng-app="app">
+<html ng-app="app" >
+<head>
     <meta charset="utf-8">
     <base href="/">
     <title></title>
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-    <body>
+    <body >
 
         <div>
             <div class="navbar navbar-inverse navbar-fixed-top">
@@ -25,7 +25,7 @@
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul  class="nav navbar-nav">
-                            <li><a href="/">Home</a></li>
+                            <li><a ui-sref="Home">Home</a></li>
                             <li><a href="/login">Login</a></li>
                             <li><a ui-sref="Register">Register</a></li>
                             <li><a ui-sref="Logout">Logout</a></li>
@@ -36,9 +36,7 @@
 
             </div>
             <div>
-                <span>></span>
                 <ui-view></ui-view>
-                <span><</span>
                 
             </div>
 
