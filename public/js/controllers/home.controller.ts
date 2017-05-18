@@ -3,11 +3,13 @@ namespace application.controllers{
 
         public formData;
 
-        public secret;
+        public get secret(){
+            return this.userService.secret;
+        }
 
         constructor(public userService: services.userService){
             console.log("welcome home");
-            this.secret = this.userService.secret;
+            //this.secret = this.userService.secret;
         }
 
         public secrets(): boolean{
